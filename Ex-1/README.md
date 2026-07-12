@@ -12,7 +12,7 @@ To implement a Single Layer Perceptron from scratch for binary classification us
 - **Source:** UCI Machine Learning Repository
 - **Samples:** 1372
 - **Features:** 4
-- **Classes:** 2
+- **Classes:** 1
 
 ---
 
