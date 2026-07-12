@@ -23,7 +23,7 @@ Deep-Learning-Laboratory/
 ├── README.md
 ├── LICENSE
 │
-├── Experiment-01-Perceptron/
+├── Ex-1/
 │   ├── Ex_1.ipynb
 │   ├── data_banknote_authentication.txt
 │   ├── Report.pdf
