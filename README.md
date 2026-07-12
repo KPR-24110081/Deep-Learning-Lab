@@ -18,7 +18,7 @@ Each experiment contains
 ## Repository Structure
 
 ```text
-Deep-Learning-Laboratory/
+Deep-Learning-Lab/
 │
 ├── README.md
 ├── LICENSE
@@ -42,8 +42,5 @@ Deep-Learning-Laboratory/
 │       ├── normalization.eps
 │       ├── step_vs_sigmoid.eps
 │       └── xor.eps
-│
-├── Experiment-02/
-├── Experiment-03/
-└── ...
+
 ```
