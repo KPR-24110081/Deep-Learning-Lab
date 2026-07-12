@@ -54,12 +54,31 @@ The perceptron model was successfully implemented from scratch and evaluated usi
 
 ## Repository Structure
 
+```text
 Ex-1/
+│   ├── Ex_1.ipynb
+│   ├── data_banknote_authentication.txt
+│   ├── Report.pdf
+│   ├── README.md
+│   └── plots/
+│       ├── histogram.eps
+│       ├── heatmap.eps
+│       ├── scatter.eps
+│       ├── boxplot.eps
+│       ├── training_error.eps
+│       ├── weight_evolution.eps
+│       ├── bias_evolution.eps
+│       ├── learning_rate.eps
+│       ├── confusion_matrix.eps
+│       ├── decision_boundary.eps
+│       ├── normalization.eps
+│       ├── step_vs_sigmoid.eps
+│       └── xor.eps
 │
-├── Ex_1.ipynb
-├── data_banknote_authentication.txt
-├── Report.pdf
-└── plots/
+├── Experiment-02/
+├── Experiment-03/
+└── ...
+```
 
 
 ---
