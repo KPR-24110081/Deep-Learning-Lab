@@ -85,7 +85,7 @@ Ex-1/
 
 ## Author
 
-K. Prithvi
-24011101047
-B.Tech AI & DS - A
-Shiv Nadar University Chennai
+- K. Prithvi
+- 24011101047
+- B.Tech AI & DS - A
+- Shiv Nadar University Chennai
