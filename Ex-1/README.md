@@ -74,10 +74,7 @@ Ex-1/
 │       ├── normalization.eps
 │       ├── step_vs_sigmoid.eps
 │       └── xor.eps
-│
-├── Experiment-02/
-├── Experiment-03/
-└── ...
+
 ```
 
 
