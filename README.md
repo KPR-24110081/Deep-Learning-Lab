@@ -7,13 +7,7 @@ This repository contains the implementation of Deep Learning Laboratory experime
 | Experiment | Topic |
 |------------|-------|
 | Experiment 1 | Single Layer Perceptron for Binary Classification |
-
-Each experiment contains
-
-- Jupyter Notebook
-- Dataset
-- Report
-- Generated Plots
+| Experiment 2 | Multi-Layer Perceptron using TensorFlow |
 
 ## Repository Structure
 
@@ -26,7 +20,7 @@ Deep-Learning-Lab/
 ├── Ex-1/
 │   ├── Ex_1.ipynb
 │   ├── data_banknote_authentication.txt
-│   ├── Report.pdf
+│   ├── Ex-1.pdf
 │   ├── README.md
 │   └── plots/
 │       ├── histogram.eps
@@ -42,5 +36,18 @@ Deep-Learning-Lab/
 │       ├── normalization.eps
 │       ├── step_vs_sigmoid.eps
 │       └── xor.eps
-
+│
+└── Experiment-02-MLP-FashionMNIST/
+│   ├── Ex_2.ipynb
+│   ├── Ex-2.pdf
+│   ├── README.md
+│   └── hyperparameter_results.csv
+│   └── plots/
+│       ├── class_distribution.png
+│       ├── confusion_matrix.png
+│       ├── hyperparameter_search_results.png
+│       ├── Model_Accuracy_Comparison.png
+│       ├── sample_images.png
+│       ├── Training_and_Validation_Accuracy.png
+│       ├── Training_and_Validation_Loss.png
 ```
