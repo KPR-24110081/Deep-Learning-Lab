@@ -39,7 +39,7 @@ Deep-Learning-Lab/
 │
 └── Experiment-02-MLP-FashionMNIST/
 │   ├── Ex_2.ipynb
-│   ├── Ex-2.pdf
+│   ├── Ex_2.pdf
 │   ├── README.md
 │   └── hyperparameter_results.csv
 │   └── plots/
