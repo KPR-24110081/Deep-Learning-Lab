@@ -107,12 +107,18 @@ The following evaluation metrics were computed:
 
 ```
 Experiment-02-MLP-FashionMNIST/
-
-│── Ex_2.ipynb
-│── Report.pdf
-│── README.md
-│── hyperparameter_results.csv
-│── plots/
+   ├── Ex_2.ipynb
+   ├── Ex_2.pdf
+   ├── README.md
+   └── hyperparameter_results.csv
+   └── plots/
+       ├── class_distribution.png
+       ├── confusion_matrix.png
+       ├── hyperparameter_search_results.png
+       ├── Model_Accuracy_Comparison.png
+       ├── sample_images.png
+       ├── Training_and_Validation_Accuracy.png
+       ├── Training_and_Validation_Loss.png
 ```
 
 ---
