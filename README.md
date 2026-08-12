@@ -4,10 +4,11 @@ This repository contains the implementation of Deep Learning Laboratory experime
 
 ## Experiments
 
-| Experiment | Topic |
-|------------|-------|
+| Experiment   | Topic                                             |
+| ------------ | ------------------------------------------------- |
 | Experiment 1 | Single Layer Perceptron for Binary Classification |
-| Experiment 2 | Multi-Layer Perceptron using TensorFlow |
+| Experiment 2 | Multi-Layer Perceptron using TensorFlow           |
+| Experiment 3 | Convolutional Neural Network using CIFAR-10       |
 
 ## Repository Structure
 
@@ -37,11 +38,11 @@ Deep-Learning-Lab/
 │       ├── step_vs_sigmoid.eps
 │       └── xor.eps
 │
-└── Experiment-02-MLP-FashionMNIST/
+├── Experiment-02-MLP-FashionMNIST/
 │   ├── Ex_2.ipynb
 │   ├── Ex_2.pdf
 │   ├── README.md
-│   └── hyperparameter_results.csv
+│   ├── hyperparameter_results.csv
 │   └── plots/
 │       ├── class_distribution.png
 │       ├── confusion_matrix.png
@@ -49,5 +50,18 @@ Deep-Learning-Lab/
 │       ├── Model_Accuracy_Comparison.png
 │       ├── sample_images.png
 │       ├── Training_and_Validation_Accuracy.png
-│       ├── Training_and_Validation_Loss.png
-```
+│       └── Training_and_Validation_Loss.png
+│
+└── Experiment-03-CNN-CIFAR10/
+    ├── Ex_3.ipynb
+    ├── README.md
+    └── figures/
+        ├── class_distribution.png
+        ├── confusion_matrix.png
+        ├── convolution_comparison.png
+        ├── feature_maps.png
+        ├── pooling_comparison.png
+        ├── sample_images.png
+        ├── stride_padding.png
+        ├── training_validation_accuracy.png
+        └── training_validation_loss.png
