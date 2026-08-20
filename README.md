@@ -9,6 +9,7 @@ This repository contains the implementation of Deep Learning Laboratory experime
 | Experiment 1 | Single Layer Perceptron for Binary Classification |
 | Experiment 2 | Multi-Layer Perceptron using TensorFlow           |
 | Experiment 3 | Convolutional Neural Network using CIFAR-10       |
+| Experiment 4 | Transfer Learning and Fine-Tuning using MobileNetV2 |
 
 ## Repository Structure
 
@@ -52,16 +53,29 @@ Deep-Learning-Lab/
 │       ├── Training_and_Validation_Accuracy.png
 │       └── Training_and_Validation_Loss.png
 │
-└── Experiment-03-CNN-CIFAR10/
-    ├── Ex_3.ipynb
+├── Experiment-03-CNN-CIFAR10/
+│   ├── Ex_3.ipynb
+│   ├── README.md
+│   └── figures/
+│       ├── class_distribution.png
+│       ├── confusion_matrix.png
+│       ├── convolution_comparison.png
+│       ├── feature_maps.png
+│       ├── pooling_comparison.png
+│       ├── sample_images.png
+│       ├── stride_padding.png
+│       ├── training_validation_accuracy.png
+│       └── training_validation_loss.png
+│
+└── Ex-4/
+    ├── Ex_4.ipynb
+    ├── Ex_4.tex
+    ├── Report.pdf
     ├── README.md
-    └── figures/
-        ├── class_distribution.png
-        ├── confusion_matrix.png
-        ├── convolution_comparison.png
-        ├── feature_maps.png
-        ├── pooling_comparison.png
+    └── plots/
         ├── sample_images.png
-        ├── stride_padding.png
         ├── training_validation_accuracy.png
-        └── training_validation_loss.png
+        ├── training_validation_loss.png
+        ├── fine_tuning_accuracy.png
+        ├── confusion_matrix.png
+        └── misclassified_images.png
