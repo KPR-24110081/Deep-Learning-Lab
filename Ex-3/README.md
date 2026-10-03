@@ -1,88 +1,55 @@
-# Experiment 3 — Convolutional Neural Network
+# Experiment 3: Convolutional Neural Network for CIFAR-10 Classification
+
+This experiment introduces the fundamentals of Convolutional Neural Networks (CNNs), including convolution, stride, padding, pooling, and feature map extraction. The model is trained on the CIFAR-10 dataset for image classification.
 
 ## Objective
 
-To understand the working principle of Convolutional Neural Networks (CNNs) by implementing convolution, stride, padding, pooling, feature-map visualization, and image classification using the CIFAR-10 dataset.
+- Understand the role of convolutional filters in feature extraction.
+- Study the effect of stride and padding on output dimensions.
+- Compare max pooling and average pooling.
+- Train a CNN for CIFAR-10 classification.
+- Interpret feature maps and classification outcomes.
 
 ## Dataset
 
-The CIFAR-10 dataset was used for this experiment.
-
-- Number of classes: 10
+- Dataset: CIFAR-10
+- Classes: 10
 - Training images: 50,000
-- Image dimensions: 32 × 32 × 3
-- Image type: RGB
-- Classes:
-  - Airplane
-  - Automobile
-  - Bird
-  - Cat
-  - Deer
-  - Dog
-  - Frog
-  - Horse
-  - Ship
-  - Truck
+- Test images: 10,000
+- Image size: 32 × 32 × 3
 
-The dataset files are not included in this repository because of their large size.
+Classes include:
 
-## Tasks Performed
+- Airplane
+- Automobile
+- Bird
+- Cat
+- Deer
+- Dog
+- Frog
+- Horse
+- Ship
+- Truck
 
-### Task 1 — Dataset Exploration
+## Core concepts covered
 
-- Loaded the CIFAR-10 dataset.
-- Displayed sample images.
-- Verified dataset dimensions.
-- Plotted the class distribution.
+- Convolution operation
+- Kernel size comparison
+- Stride and padding variations
+- Feature map generation
+- Pooling and dimensionality reduction
+- CNN training and validation
 
-### Task 2 — Convolution
-
-Convolution was implemented and compared using:
-
-- 3 × 3 kernel
-- 5 × 5 kernel
-- 7 × 7 kernel
-
-The resulting feature-map dimensions were analyzed.
-
-### Task 3 — Stride and Padding
-
-The effects of the following configurations were studied:
-
-- Stride = 1
-- Stride = 2
-- Same Padding
-- Valid Padding
-
-### Task 4 — Feature Map Visualization
-
-A convolution layer with multiple filters was used to generate and visualize feature maps. Eight feature maps were displayed.
-
-### Task 5 — Pooling
-
-The following pooling methods were compared:
-
-- Max Pooling
-- Average Pooling
-
-Their output dimensions and classification performance were analyzed.
-
-### Task 6 — CNN Construction and Training
-
-The CNN architecture used was:
+## Model architecture
 
 ```text
 Input
   ↓
-Conv2D
-  ↓
-ReLU
+Conv2D + ReLU
   ↓
 MaxPooling
   ↓
-Conv2D
-  ↓
-ReLU
+Conv2D + ReLU
   ↓
 MaxPooling
   ↓
@@ -91,3 +58,34 @@ Flatten
 Dense
   ↓
 Softmax
+```
+
+## Evaluation metrics
+
+- Accuracy
+- Loss curves
+- Confusion matrix
+- Class distribution analysis
+
+## Files in this folder
+
+- `Ex_3.ipynb` — notebook implementing the experiments
+- `Ex_3 .pdf` — project report
+- `plots/` — figure outputs and visual analyses
+- `README.md` — experiment documentation
+
+## Generated visualizations
+
+- Class distribution
+- Sample images
+- Convolution comparison plots
+- Feature maps
+- Pooling comparison
+- Stride and padding diagrams
+- Training and validation loss curves
+- Training and validation accuracy curves
+- Confusion matrix
+
+## Outcome
+
+The experiment successfully demonstrated how CNNs learn spatial hierarchies and how different architectural components influence the representational power and performance of the classifier.

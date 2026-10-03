@@ -1,88 +1,71 @@
-# Experiment 1: Single Layer Perceptron for Binary Classification
+# Experiment 1: Single-Layer Perceptron for Binary Classification
+
+This experiment focuses on implementing a single-layer perceptron from scratch for binary classification. The model is trained on the Banknote Authentication dataset and evaluated using standard classification metrics and visual diagnostics.
 
 ## Objective
 
-To implement a Single Layer Perceptron from scratch for binary classification using the Banknote Authentication Dataset and evaluate its performance.
-
----
+- Implement a perceptron model without using high-level classification libraries.
+- Train the model on a binary classification dataset.
+- Analyze learning behavior through loss, weight updates, and decision boundaries.
+- Compare the custom implementation with a scikit-learn perceptron baseline.
 
 ## Dataset
 
-- **Dataset:** Banknote Authentication Dataset
-- **Source:** UCI Machine Learning Repository
-- **Samples:** 1372
-- **Features:** 4
-- **Classes:** 2
+- Dataset: Banknote Authentication
+- Source: UCI Machine Learning Repository
+- Samples: 1,372
+- Features: 4
+- Classes: 2 (genuine vs forged banknotes)
 
----
+## Workflow
 
-## Tasks Performed
+- Dataset loading and exploration
+- Exploratory data analysis
+- Data preprocessing and normalization
+- Perceptron implementation from scratch
+- Training and evaluation
+- Visualization of learning curves and decision boundary
+- Comparison with scikit-learn perceptron
 
-- Dataset Exploration
-- Exploratory Data Analysis
-- Data Preprocessing
-- Single Layer Perceptron Implementation
-- Model Training
-- Model Evaluation
-- Learning Rate Comparison
-- Weight Evolution
-- Bias Evolution
-- Decision Boundary Visualization
-- Step vs Sigmoid Comparison
-- XOR Problem Visualization
-- Feature Normalization Analysis
-- Comparison with Scikit-learn Perceptron
+## Key concepts covered
 
----
+- Linear decision boundaries
+- Perceptron learning rule
+- Weight and bias evolution over training epochs
+- Feature normalization effects
+- Binary classification metrics
 
-## Technologies Used
+## Evaluation metrics
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion matrix
 
----
+## Files in this folder
 
-## Results
+- `Ex_1.ipynb` — main implementation and analysis notebook
+- `Ex_1.pdf` — report/exported document
+- `data_banknote_authentication.txt` — dataset file
+- `plots/` — generated visualizations
+- `README.md` — experiment documentation
 
-The perceptron model was successfully implemented from scratch and evaluated using Accuracy, Precision, Recall, F1-score, and Confusion Matrix. Various visualizations were generated to analyze the learning behaviour and convergence of the model.
+## Generated visualizations
 
----
+- Histogram
+- Correlation heatmap
+- Scatter plots
+- Box plots
+- Training error curve
+- Weight evolution
+- Bias evolution
+- Learning rate analysis
+- Decision boundary
+- Step vs sigmoid comparison
+- XOR visualization
+- Normalization effect analysis
 
-## Repository Structure
+## Outcome
 
-```text
-Ex-1/
-│   ├── Ex_1.ipynb
-│   ├── data_banknote_authentication.txt
-│   ├── Report.pdf
-│   ├── README.md
-│   └── plots/
-│       ├── histogram.eps
-│       ├── heatmap.eps
-│       ├── scatter.eps
-│       ├── boxplot.eps
-│       ├── training_error.eps
-│       ├── weight_evolution.eps
-│       ├── bias_evolution.eps
-│       ├── learning_rate.eps
-│       ├── confusion_matrix.eps
-│       ├── decision_boundary.eps
-│       ├── normalization.eps
-│       ├── step_vs_sigmoid.eps
-│       └── xor.eps
-
-```
-
-
----
-
-## Author
-
- K. Prithvi<br>
- 24011101047<br>
- B.Tech AI & DS - A<br>
- Shiv Nadar University Chennai
+The perceptron was successfully trained and validated on a binary classification task, demonstrating the fundamental principles of perceptron learning and the role of feature scaling in model convergence.

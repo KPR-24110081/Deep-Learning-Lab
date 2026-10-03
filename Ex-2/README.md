@@ -1,24 +1,25 @@
-# Experiment 02 - Multi-Layer Perceptron for Fashion-MNIST Classification
+# Experiment 2: Multi-Layer Perceptron for Fashion-MNIST Classification
+
+This experiment implements a Multi-Layer Perceptron (MLP) to classify clothing images from the Fashion-MNIST dataset. The workflow includes data preparation, model training, hyperparameter tuning, and evaluation using multiple performance metrics.
 
 ## Objective
 
-Implement a Multi-Layer Perceptron (MLP) using TensorFlow/Keras to classify images from the Fashion-MNIST dataset. The experiment also includes hyperparameter optimization using RandomizedSearchCV to improve the model's performance.
-
----
+- Build an MLP in TensorFlow/Keras for image classification.
+- Train and evaluate the model on Fashion-MNIST.
+- Perform hyperparameter optimization using randomized search.
+- Compare baseline and optimized model performance.
 
 ## Dataset
 
-**Fashion-MNIST**
+- Dataset: Fashion-MNIST
+- Classes: 10 clothing categories
+- Training samples: 60,000
+- Test samples: 10,000
+- Image size: 28 × 28 grayscale
 
-- 70,000 grayscale images
-- 28 × 28 pixels
-- 10 clothing categories
-- 60,000 training images
-- 10,000 testing images
+Classes include:
 
-Classes:
-
-- T-shirt/Top
+- T-shirt/top
 - Trouser
 - Pullover
 - Dress
@@ -27,106 +28,52 @@ Classes:
 - Shirt
 - Sneaker
 - Bag
-- Ankle Boot
+- Ankle boot
 
----
+## Model architecture
 
-## Tools & Technologies
+The model uses a shallow neural network with dense layers:
 
-- Python
-- TensorFlow / Keras
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- SciKeras
-
----
-
-## Model Architecture
-
-```
-Input Layer (784)
-
-↓
-
-Dense(128, ReLU)
-
-↓
-
-Dense(64, ReLU)
-
-↓
-
-Dense(10, Softmax)
+```text
+Input (784) -> Dense(128, ReLU) -> Dense(64, ReLU) -> Dense(10, Softmax)
 ```
 
----
+## Hyperparameter tuning
 
-## Hyperparameter Optimization
+The experiment explores tuning across several values, including:
 
-RandomizedSearchCV was used to optimize:
+- Number of neurons in hidden layers
+- Optimizer choice
+- Batch size
+- Number of epochs
 
-- Hidden Layer 1 Neurons
-- Hidden Layer 2 Neurons
-- Optimizer
-- Batch Size
-- Number of Epochs
-
----
-
-## Performance Evaluation
-
-The following evaluation metrics were computed:
+## Evaluation metrics
 
 - Accuracy
 - Precision
 - Recall
-- F1-Score
-- Confusion Matrix
-- Classification Report
+- F1-score
+- Confusion matrix
+- Classification report
 
----
+## Files in this folder
 
-## Generated Visualizations
+- `Ex_2.ipynb` — notebook with implementation and analysis
+- `Ex_2.pdf` — report
+- `hyperparameter_results.csv` — optimization results
+- `plots/` — performance and diagnostic plots
+- `README.md` — documentation
 
-- Sample Images
-- Class Distribution
-- Training Accuracy vs Epoch
-- Validation Accuracy vs Epoch
-- Training Loss vs Epoch
-- Validation Loss vs Epoch
-- Confusion Matrix
-- Hyperparameter Search Results
-- Baseline vs Optimized Model Comparison
+## Visualizations included
 
----
+- Sample images
+- Class distribution
+- Training and validation accuracy
+- Training and validation loss
+- Confusion matrix
+- Hyperparameter search summary
+- Baseline vs optimized model comparison
 
-## Repository Contents
+## Outcome
 
-```
-Experiment-02-MLP-FashionMNIST/
-   ├── Ex_2.ipynb
-   ├── Ex_2.pdf
-   ├── README.md
-   └── hyperparameter_results.csv
-   └── plots/
-       ├── class_distribution.png
-       ├── confusion_matrix.png
-       ├── hyperparameter_search_results.png
-       ├── Model_Accuracy_Comparison.png
-       ├── sample_images.png
-       ├── Training_and_Validation_Accuracy.png
-       ├── Training_and_Validation_Loss.png
-```
-
----
-
-## Learning Outcomes
-
-- Implemented an MLP using TensorFlow/Keras.
-- Applied image preprocessing techniques.
-- Trained and evaluated a neural network for image classification.
-- Performed hyperparameter optimization using RandomizedSearchCV.
-- Analyzed model performance through multiple evaluation metrics and visualizations.
+The MLP achieved strong classification performance on Fashion-MNIST, and hyperparameter optimization helped improve the model’s ability to generalize effectively to unseen data.

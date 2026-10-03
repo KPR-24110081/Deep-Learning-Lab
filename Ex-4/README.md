@@ -1,97 +1,60 @@
-# Experiment 4: Transfer Learning using MobileNetV2
+# Experiment 4: Transfer Learning with MobileNetV2
+
+This experiment explores transfer learning using a pretrained MobileNetV2 model for CIFAR-10 image classification. The workflow includes feature extraction, fine-tuning, and evaluation of training performance before and after optimization.
 
 ## Objective
 
-To implement transfer learning using a pretrained MobileNetV2 model on the CIFAR-10 dataset and evaluate its performance before and after fine-tuning.
-
----
+- Use a pretrained ImageNet model as a feature extractor.
+- Adapt MobileNetV2 to CIFAR-10 classification.
+- Compare performance before and after fine-tuning.
+- Evaluate improvements in accuracy and generalization.
 
 ## Dataset
 
-* **Dataset:** CIFAR-10
-* **Training Samples:** 50,000
-* **Testing Samples:** 10,000
-* **Image Size:** 32 × 32 × 3
-* **Classes:** 10
+- Dataset: CIFAR-10
+- Training samples: 50,000
+- Testing samples: 10,000
+- Image size: 32 × 32 × 3
+- Classes: 10
 
----
+## Workflow
 
-## Tasks Performed
+- Load CIFAR-10 data
+- Normalize and preprocess images
+- Load pretrained MobileNetV2 model
+- Freeze base layers for initial training
+- Add and train a classification head
+- Unfreeze later layers for fine-tuning
+- Measure performance improvements
+- Analyze misclassified examples and training curves
 
-* CIFAR-10 Dataset Preparation
-* Dataset Normalization
-* Sample Image Visualization
-* Transfer Learning using MobileNetV2
-* ImageNet Pretrained Model Loading
-* Convolutional Base Freezing
-* Classification Head Construction
-* Model Training
-* Fine-Tuning
-* Model Evaluation
-* Accuracy, Precision, Recall and F1-score Calculation
-* Confusion Matrix Visualization
-* Misclassified Image Analysis
-* Training and Validation Accuracy Visualization
-* Training and Validation Loss Visualization
+## Key results
 
----
+| Metric | Result |
+| --- | ---: |
+| Accuracy before fine-tuning | 85.78% |
+| Accuracy after fine-tuning | 87.99% |
+| Improvement | +2.21 percentage points |
+| Precision | 87.99% |
+| Recall | 87.99% |
+| F1-score | 87.94% |
 
-## Technologies Used
+## Files in this folder
 
-* Python
-* TensorFlow
-* Keras
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
+- `Ex_4.ipynb` — main implementation notebook
+- `Ex-4.pdf` — report
+- `plots/` — generated graphs and visual diagnostics
+- `README.md` — experiment summary
 
----
+## Generated analysis
 
-## Results
+- Sample image visualization
+- Training vs validation accuracy
+- Training vs validation loss
+- Fine-tuning accuracy comparison
+- Confusion matrix
+- Misclassified image review
 
-The MobileNetV2 transfer learning model achieved an accuracy of **85.78%** before fine-tuning.
+## Outcome
 
-After fine-tuning the final portion of the pretrained network, the model achieved an accuracy of **87.99%**, resulting in an improvement of **2.21 percentage points**.
-
-| Metric                      |                 Result |
-| --------------------------- | ---------------------: |
-| Before Fine-Tuning Accuracy |                 85.78% |
-| After Fine-Tuning Accuracy  |                 87.99% |
-| Improvement                 | 2.21 percentage points |
-| Precision                   |                 87.99% |
-| Recall                      |                 87.99% |
-| F1-score                    |                 87.94% |
-| Total Parameters            |              2,423,242 |
-| Initial Training Time       |         243.89 seconds |
-| Fine-Tuning Time            |         186.98 seconds |
-| Total Training Time         |         430.87 seconds |
-
----
-
-## Repository Structure
-
-```text
-Ex-4/
-│   ├── Ex_4.ipynb
-│   ├── Report.pdf
-│   ├── README.md
-│   └── plots/
-│       ├── sample_images.png
-│       ├── training_validation_accuracy.png
-│       ├── training_validation_loss.png
-│       ├── fine_tuning_accuracy.png
-│       ├── fine_tuning_loss.png
-│       ├── confusion_matrix.png
-│       └── misclassified_images.png
-```
-
----
-
-## Author
-
-K. Prithvi<br>
-24011101047<br>
-B.Tech AI & DS - A<br>
-Shiv Nadar University Chennai
-
+Transfer learning with MobileNetV2 proved effective for CIFAR-10, and fine-tuning the deeper layers led to measurable gains in classification accuracy and convergence quality.

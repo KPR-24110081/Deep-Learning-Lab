@@ -1,160 +1,80 @@
-# Experiment 5 — Comprehensive CNN Study
+# Experiment 5: Comprehensive CNN Study
 
-This experiment presents a comprehensive study of **Convolutional Neural Network (CNN) training, regularization, optimization, hyperparameter tuning, transfer learning, fine-tuning, and cross-validation** using **MobileNetV2** on the **Oxford-IIIT Pet Dataset**.
-
-The experiment was completed as part of the **Deep Learning Laboratory** for the B.Tech Artificial Intelligence & Data Science curriculum at **Shiv Nadar University Chennai**.
-
----
+This experiment covers a broad set of CNN-related topics, including initialization strategies, regularization, normalization, optimizer comparison, transfer learning, fine-tuning, and cross-validation. It provides a structured investigation into how architecture and training choices affect deep model performance.
 
 ## Objective
 
-The objectives of this experiment are to:
-
-- Study the effect of different weight initialization techniques.
-- Analyze overfitting and the effect of regularization.
-- Investigate the impact of Batch Normalization.
-- Compare different optimization algorithms.
-- Perform systematic CNN hyperparameter tuning.
-- Study transfer learning using a pretrained MobileNetV2 model.
-- Compare feature extraction and fine-tuning.
-- Perform 5-fold cross-validation for model selection.
-- Evaluate the final selected model on an independent test set.
-
----
+- Study the effect of different weight initialization methods.
+- Analyze overfitting using regularization techniques.
+- Compare optimization algorithms.
+- Evaluate batch normalization and dropout effects.
+- Explore transfer learning and fine-tuning with MobileNetV2.
+- Validate final model performance using cross-validation and a held-out test set.
 
 ## Dataset
 
-### Oxford-IIIT Pet Dataset
+- Dataset: Oxford-IIIT Pet Dataset
+- Number of classes: 37
+- Image type: RGB
+- Input size: 224 × 224 × 3
+- Task: Multi-class image classification
 
-The experiment uses the **Oxford-IIIT Pet Dataset**, containing images from **37 different cat and dog breeds**.
+## Experiments included
 
-| Property | Value |
-|---|---|
-| Dataset | Oxford-IIIT Pet |
-| Number of Classes | 37 |
-| Image Type | RGB |
-| Input Size | `224 × 224 × 3` |
-| Task | Multi-class Image Classification |
+### 1. Weight initialization
+- Zero initialization
+- Random initialization
+- Xavier/Glorot initialization
+- He initialization
 
-The dataset is divided into training, validation, and test sets. The independent test set is kept separate during model selection and is used only for the final evaluation.
-
----
-
-## Model Architecture
-
-The experiment uses **MobileNetV2 pretrained on ImageNet**.
-
-MobileNetV2 is a lightweight CNN architecture based on:
-
-- Inverted residual blocks
-- Depthwise separable convolutions
-- Pointwise `1 × 1` convolutions
-- Linear bottlenecks
-- Batch Normalization
-- ReLU6 activation
-
-The pretrained network is adapted to the 37-class pet classification task by replacing the original classification head.
-
----
-
-## Experiments
-
-### 1. Weight Initialization
-
-Four initialization strategies were compared:
-
-- Zero Initialization
-- Random Initialization
-- Xavier/Glorot Initialization
-- He Initialization
-
-#### Results
-
-| Initialization | Final Validation Accuracy | Best Validation Accuracy | Training Time |
-|---|---:|---:|---:|
-| Zero | 91.30% | 91.30% | 41.96 s |
-| Random | 90.35% | 90.35% | 41.71 s |
-| Xavier/Glorot | 91.17% | 91.17% | 41.40 s |
-| He | 91.17% | **91.58%** | 41.91 s |
-
-He initialization achieved the highest peak validation accuracy, while Zero initialization achieved the highest final validation accuracy.
-
----
-
-### 2. Regularization and Overfitting
-
-Different regularization strategies were investigated to study their effect on overfitting and generalization.
-
-The experiments included:
-
-- No Regularization
-- L2 Regularization
+### 2. Regularization and overfitting
+- No regularization
+- L2 regularization
 - Dropout
-- Batch Normalization
+- Batch normalization
 
-Training and validation accuracy/loss curves were used to analyze the generalization gap.
-
----
-
-### 3. Batch Normalization
-
-Batch Normalization was investigated to study its effect on:
-
-- Training stability
-- Convergence
-- Validation performance
-- Sensitivity to initialization
-
----
-
-### 4. Optimization Algorithms
-
-The following optimizers were compared:
-
+### 3. Optimizer comparison
 - SGD
 - Momentum
 - RMSProp
 - Adam
 
-#### Results
+### 4. Transfer learning and fine-tuning
+- Feature extraction with a pretrained MobileNetV2 base
+- Partial unfreezing and fine-tuning
 
-| Optimizer | Final Loss | Best Validation Accuracy | Epoch to Converge | Training Time |
-|---|---:|---:|---:|---:|
-| SGD | 3.079395 | 23.37% | 5 | 42.872 s |
-| Momentum | 0.470831 | 89.13% | 5 | 42.320 s |
-| RMSProp | 0.046401 | 89.81% | 5 | 42.350 s |
-| Adam | **0.043456** | **90.49%** | 5 | 42.808 s |
+### 5. Cross-validation
+- 5-fold validation for model selection
 
-Adam achieved the highest validation accuracy and the lowest final loss among the tested optimizers.
+## Files in this folder
 
----
+- `DL_Lab_5_Part_1.ipynb` — first set of experiments and analysis
+- `DL_Lab_5_Part_2.ipynb` — second part including transfer learning and validation
+- `Ex_5 .pdf` — report document
+- `plots/` — figures from the experiments
+- `README.md` — documentation
 
-### 5. CNN Hyperparameter Tuning
+## Key findings
 
-The following hyperparameters were investigated:
+- He initialization provided good convergence behavior.
+- Regularization and normalization helped control overfitting and improved training stability.
+- Adam consistently achieved strong validation performance compared with other optimizers.
+- Transfer learning significantly improved performance on the pet classification task.
+- Cross-validation supported robust model selection and helped reduce variance.
 
-- Learning Rate
-- Batch Size
-- Dropout Rate
-- Optimizer
-- Fine-Tuning Learning Rate
-- Frozen / Partially Unfrozen Layers
+## Generated plots
 
-The experiments were performed by changing one hyperparameter at a time while keeping the remaining settings fixed.
+- Initialization training loss
+- Validation accuracy plots
+- Regularization accuracy and loss curves
+- Batch normalization comparison
+- Optimizer performance plots
+- Learning rate and batch size sensitivity
+- Dropout comparison
+- Transfer learning vs fine-tuning comparison
+- 5-fold validation summary
+- Confusion matrix
 
----
+## Outcome
 
-### 6. Transfer Learning
-
-Two transfer-learning strategies were compared.
-
-#### Feature Extraction
-
-The pretrained MobileNetV2 base is frozen and used as a fixed feature extractor.
-
-```text
-Pretrained MobileNetV2
-          ↓
-      Freeze Base
-          ↓
-    New Classifier
+The experiment demonstrates that careful training design, regularization, and transfer learning are essential for building robust CNNs in real-world image classification settings.
